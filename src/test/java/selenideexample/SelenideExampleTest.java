@@ -15,7 +15,7 @@ public class SelenideExampleTest {
 
     @Test
     public void selenideTest() {
-        Configuration.remote = "http://localhost:4444/";
+        Configuration.remote = "http://127.0.0.1:4444/";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         open("https://google.com");
         $("[name='q']")
