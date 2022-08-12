@@ -29,7 +29,7 @@ public class SelenideExampleTest {
         options.put("enableVideo", true);
         capabilities.setCapability("selenoid:options", options);
         RemoteWebDriver driver = new RemoteWebDriver(
-                URI.create("http://172.17.96.1:4444/wd/hub").toURL(),
+                URI.create("http://192.168.1.106:4444/wd/hub").toURL(),
                 capabilities
         );
         WebDriverRunner.setWebDriver(driver);
