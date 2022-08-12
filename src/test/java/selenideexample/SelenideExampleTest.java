@@ -23,7 +23,7 @@ public class SelenideExampleTest {
     public void setUpSelenoid() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("browserVersion", "104.0");
+        capabilities.setCapability("browserVersion", "103.0");
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
