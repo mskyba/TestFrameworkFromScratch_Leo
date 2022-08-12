@@ -1,6 +1,5 @@
 package selenideexample;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -17,7 +16,6 @@ import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
 
 public class SelenideExampleTest {
 
@@ -31,7 +29,7 @@ public class SelenideExampleTest {
         options.put("enableVideo", true);
         capabilities.setCapability("selenoid:options", options);
         RemoteWebDriver driver = new RemoteWebDriver(
-                URI.create("http://localhost:4444/wd/hub").toURL(),
+                URI.create("http://172.17.96.1:4444/wd/hub").toURL(),
                 capabilities
         );
         WebDriverRunner.setWebDriver(driver);
