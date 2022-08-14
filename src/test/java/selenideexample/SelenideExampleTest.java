@@ -46,10 +46,10 @@ public class SelenideExampleTest {
         $$x("//h3[contains(text(), 'Selenide')]")
                 .filter(visible)
                 .shouldHave(sizeGreaterThanOrEqual(7))
-                .get(1)
+                .get(0)
                 .click();
         $(".donate_header")
-                .shouldHave(text("Selenide Supports Ukraine \uD83C\uDDFA\uD83C\uDDE6"));
+                .shouldHave(text("Селенид поддерживает Украину \uD83C\uDDFA\uD83C\uDDE6"));
     }
 
     @Test
@@ -62,10 +62,10 @@ public class SelenideExampleTest {
         $$x("//h3[contains(text(), 'Selenide')]")
                 .filter(visible)
                 .shouldHave(sizeGreaterThanOrEqual(7))
-                .get(1)
+                .get(0)
                 .click();
-        $(".donate_header")
-                .shouldHave(text("Selenide Supports Ukraine \uD83C\uDDFA\uD83C\uDDE6"));
+        $(".main-menu-pages")
+                .has(text("С чего начать?"));
     }
 
     @Test
